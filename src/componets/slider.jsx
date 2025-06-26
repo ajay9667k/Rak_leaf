@@ -36,7 +36,7 @@ const Faq = () => {
         <h2 className="text-4xl font-extrabold text-[#71D6CE] text-center mb-12">Frequently Asked Questions</h2>
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="bg-gray-800 shadow-md rounded-xl p-6">
+            <div key={index} className="bg-[#ffffff0d] shadow-md rounded-xl p-6">
               <button
                 className="w-full text-left flex justify-between items-center text-xl font-semibold"
                 onClick={() => toggleFaq(index)}

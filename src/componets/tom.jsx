@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // import { useNavigate } from 'react-router-dom'; // Removed useNavigate import
 import rfLogo from '../imgerack/rf.jpg';
+import { Link } from 'react-router-dom';
 // import Login from './login.jsx'; // Assuming Login is a function that handles login
 
 
@@ -16,7 +17,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar border border-t-2 border-lime-200" style={{ backgroundColor: '#07282C' }}>
+      <nav className="navbar border  border-t-2 border-lime-200" style={{ backgroundColor: '#07282C' }}>
         <div className="navbar-container">
           {/* Logo */}
           <img src={rfLogo} alt="RF Logo" style={{ height: '50px', width: '52px', objectFit: 'cover', borderRadius: '10px', marginRight: '1rem', background: '#fff', padding: '4px' }} />
@@ -24,25 +25,28 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <ul className="nav-menu" style={{ fontSize: '1.25rem' }}>
             <li className="nav-item">
-              <a className="nav-link">
-                <span>Home</span>
-              </a>
+              <Link to={"/"}>
+              <p className='text-[18px] hover:text-[#2563eb] font-semibold text-white'>Home</p>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link">
-                <span>About</span>
-              </a>
+               <Link to={"/about"}>
+              <p className='text-[18px] hover:text-[#2563eb] font-semibold text-white'>About</p>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">service</a>
+              
+               <Link to={"/"}>
+              <p className='text-[18px] hover:text-[#2563eb] font-semibold text-white'>Service</p>
+              </Link>
             </li>
             <li className="nav-item dropdown" style={{ position: 'relative' }}>
-              <a className="nav-link" href="#">
+              <Link to={"/"} className="nav-link" >
                 <span>Pages</span>
                 <svg className="dropdown-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                 </svg>
-              </a>
+              </Link>
               <ul className="dropdown-menu" style={{
                 display: 'none',
                 position: 'absolute',
@@ -59,22 +63,25 @@ const Navbar = () => {
                 margin: 0,
               }}>
                 <li><a className="dropdown-link" href="#pricing">Pricing</a></li>
+                <hr />
                 <li><a className="dropdown-link" href="#blog">Blog</a></li>
-                <li><a className="dropdown-link" href="#single-post">Single Post</a></li>
+                <hr />
+                <li><a className="dropdown-link" href="#single-post">Single Post</a></li><hr />
                 <li><a className="dropdown-link" href="#faq">FAQ</a></li>
+                <hr />
                 <li><a className="dropdown-link" href="#404">404 Page</a></li>
               </ul>
             </li>
              <li className="nav-item">
-              <a className="nav-link">
-                <span>Contact</span>
-              </a>
+              <Link to={"/"}>
+              <p className='text-[18px] hover:text-[#2563eb] font-semibold text-white'>Contact</p>
+              </Link>
             </li>
           </ul>
 
           {/* Desktop Actions */}
           <div className="nav-actions">
-            <button className="btn-link" >Login</button>
+            <Link to={"/login"}><button className="btn-link" >Login</button></Link>
             <button className="btn-link">Contact Sales</button>
             <button className="btn-primary">
               <span>Get started</span>

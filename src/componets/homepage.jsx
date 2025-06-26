@@ -156,7 +156,7 @@ const Homepage = () => {
 
           <div className="h-auto w-full mt-28">
             <div className="flex flex-col md:flex-row md:w-[90%] m-auto">
-              <div className="md:w-[450px] w-full flex flex-col justify-center transition duration-700 hover:bg-gradient-to-br from-[#07282C] via-[#0B8186] to-[#FFC1E3] border-[#FFFFFF21] md:border-r border-b  h-[280px]">
+              <div className="md:w-[450px] w-full flex flex-col justify-center  border-[#FFFFFF21] md:border-r border-b  h-[280px]">
                 <div className="h-[230px] md:w-[300px]    md:m-auto">
                   <img
                     src="https://templatekit.jegtheme.com/cloudsion/wp-content/uploads/sites/383/2023/06/Investment.png"
