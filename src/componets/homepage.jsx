@@ -328,7 +328,7 @@ const Homepage = () => {
           <div className="flex flex-col md:flex-row  h-auto   md:w-[95%] w-full m-auto">
             <div className="w-[100%] h-[600px] flex flex-col  items-center">
               <div className="h-[280px] p-4 bg-[#FFFFFF0D] shadow-2xs  backdrop-blur-lg w-[400px]  ">
-                <img src={reso} className="h-[240px] " alt="" />
+                <img src={reso} className="h-[240px] md:w-full w-[300px] " alt="" />
               </div>
               <div className="h-[300px] w-full gap-6 flex flex-row mt-5">
                 <div className="h-[180px] w-[230px] p-4 bg-[#FFFFFF0D] shadow-2xs  backdrop-blur-lg ">
