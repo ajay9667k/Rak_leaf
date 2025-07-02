@@ -31,8 +31,8 @@ const Faq = () => {
   };
 
   return (
-    <section className="py-20 bg-[#07282C] text-white">
-      <div className="max-w-4xl mx-auto px-4">
+    <section className="py-20 bg-[#07282C]  text-white">
+      <div className="max-w-4xl mx-auto mt-[150px] md:mt-0 px-4">
         <h2 className="text-4xl font-extrabold text-[#71D6CE] text-center mb-12">Frequently Asked Questions</h2>
         <div className="space-y-4">
           {faqs.map((faq, index) => (

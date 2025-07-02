@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Footer2 = () => {
   return (
     <div className="md:h-[480px] h-[700px] w-full bg-[#07282C]">
-      <div className="flex flex-col md:gap-8 pt-10 justify-center items-center md:flex-row w-[100%]">
-        <div className="md:gap-8 h-auto    flex flex-row justify-center items-center md:w-[45%] w-full">
+      <div className="flex flex-col md:gap-4 pt-10 justify-center items-center md:flex-row w-[100%]">
+        <div className="md:gap-8 h-auto     flex flex-row justify-center items-center md:w-[45%] w-full">
           <div className="flex flex-col h-[250px]  w-full ">
             <div>
               <h3
