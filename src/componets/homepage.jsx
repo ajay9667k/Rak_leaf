@@ -139,12 +139,12 @@ const Homepage = () => {
   return (
     <div className="bg-[#07282C] h-auto">
    
-      <div className="w-full h-[330px] overflow-hidden ">
+      <div className="w-full h-[350px] md:h-[330px] overflow-hidden ">
         <Slider {...settings}>
           <div>
             <div className="w-[100%]  ">
-              <div className="md:w-[95%] h-[300px]  md:h-[300px]  m-9 bg-slate-400   bg-center bg-cover    ">
-                <div className="flex flex-col md:flex-row m-auto justify-center  bg-gradient-to-r from-[#0e3c42] to-[#2a8898] h-auto md:h-[300px]  w-[100%]">
+              <div className="md:w-[95%] h-[340px]  md:h-[300px]  m-9 bg-slate-400   bg-center bg-cover    ">
+                <div className="flex flex-col md:flex-row m-auto justify-center  bg-gradient-to-r from-[#0e3c42] to-[#2a8898] h-[340px] md:h-[300px]  w-[100%]">
                   
                  <div className="h-[300px] w-full md:w-[60%] rounded-md">
                     <div className="text-center p-6  transition-all duration-700">
@@ -164,7 +164,7 @@ const Homepage = () => {
           <div>
             <div className="w-[100%]  ">
               <div className="md:w-[95%]  h-[400px] md:h-[400px] m-9 bg-gradient-to-r from-[#0c444b] to-yellow-300   bg-center border-gray-100  ">
-                 <div className="flex flex-col md:flex-row m-auto justify-center  bg-gradient-to-r from-[#0e3c42] to-[#2a8898] h-auto md:h-[300px]  w-[100%]">
+                 <div className="flex flex-col md:flex-row m-auto justify-center  bg-gradient-to-r from-[#0e3c42] to-[#2a8898] h-[340px] md:h-[300px]  w-[100%]">
                   
                  <div className="h-[300px] w-full md:w-[60%] rounded-md">
                     <div className="text-center p-6  transition-all duration-700">
@@ -183,7 +183,7 @@ const Homepage = () => {
           <div>
             <div className="w-[100%]  ">
               <div className="md:w-[95%]  h-[400px] md:h-[500px] m-9 bg-gradient-to-r from-[#0c444b] to-yellow-300  bg-center border-gray-200   ">
-                 <div className="flex flex-col md:flex-row m-auto justify-center  bg-gradient-to-r from-[#0e3c42] to-[#2a8898] h-auto md:h-[300px]  w-[100%]">
+                 <div className="flex flex-col md:flex-row m-auto justify-center  bg-gradient-to-r from-[#0e3c42] to-[#2a8898] h-[340px] md:h-[300px]  w-[100%]">
                   
                  <div className="h-[300px] w-full md:w-[60%] rounded-md">
                     <div className="text-center p-6  transition-all duration-700">
@@ -205,12 +205,12 @@ const Homepage = () => {
       <div>
         {/* 2 part */}
 
-        <div className="h-auto w-full  md:mt-[100px] ">
-          <p className="text-center w-full md:text-5xl text-[#71D6CE] font-serif tracking-wide ">
+        <div className="h-auto w-full mt-[50px]  md:mt-[100px] ">
+          <p className="text-center text-2xl w-full md:text-5xl text-[#71D6CE] font-serif tracking-wide ">
             Provide Tools and Expertise to Effectively <br />
             <span className="">Manage Cloud Environments</span>
           </p>
-          <p className="text-center text-lg text-[#E7E9EA] pt-4 w-[60%] m-auto">
+          <p className="md:text-center text-lg text-[#E7E9EA] pt-4 w-[80%] md:w-[60%] m-auto">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
             quae ab illo inventore veritatis et quasi architecto.
