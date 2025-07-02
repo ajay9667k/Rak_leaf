@@ -10,7 +10,8 @@ module.exports = {
               "baner3":"url(/src/imgerack/slider3.jpg)",
               "baner4":"url(/src/imgerack/slider4.jpg)",
               "count":"url(/src/imgerack/line.png)",
-              "ban":"url(/src/imgerack/gt.jpg)"
+              "ban":"url(/src/imgerack/gt.jpg)",
+              "group":"url(/src/imgerack/group.jpg)",
             }
     },
   },

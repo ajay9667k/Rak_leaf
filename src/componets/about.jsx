@@ -1,6 +1,9 @@
 import Rk from "../imgerack/rk2.webp";
 import per from "../imgerack/Best-Performance.png"
 import per1 from "../imgerack/banner_image-41.png"
+import per2 from "../imgerack/1-change1.jpg"
+import per3 from "../imgerack/IN.webp"
+import per4 from "../imgerack/banner_image.png"
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCogs, faLock, faHeadset, faTachometerAlt, faCloud, faSyncAlt } from "@fortawesome/free-solid-svg-icons";
@@ -14,21 +17,21 @@ const Aboutpage = () => {
     {
       name: "John Doe",
       position: "CEO, Company A",
-      photo: "https://templatekit.jegtheme.com/cloudsion/wp-cont…seup-of-cheerful-blond-handsome-young-man-utc.png",
+      photo:per2,
       text: "This company exceeded my expectations. Their services are top-notch, and the team is very professional.",
       rating: 5,
     },
     {
       name: "Jane Smith",
       position: "Marketing Manager, Company B",
-      photo: "",
+      photo: per3,
       text: "We saw a significant improvement in our brand's performance after working with this team. Highly recommend them!",
       rating: 4,
     },
     {
       name: "Michael Johnson",
       position: "CTO, Company C",
-      photo: "https://via.placeholder.com/150",
+      photo:per4,
       text: "The technical expertise and communication were excellent. They helped us solve our most complex challenges.",
       rating: 5,
     },
@@ -62,17 +65,17 @@ const Aboutpage = () => {
     <div className=" w-full bg-[#07282C]">
       {/* part 0 */}
         <section
-      className="bg-cover bg-center  text-white py-20 px-6 text-center"
+      className="bg-cover bg-center bg-group h-[450px]  text-white py-20 px-6 text-center"
       
     >
       <div className="container mx-auto max-w-4xl">
         {/* Optional Image (Logo or Icon) */}
       
 
-        <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+        <h1 className="text-4xl sm:text-5xl  font-bold mb-6">
           Welcome to Our  Platform
         </h1>
-        <p className="text-lg sm:text-xl mb-8">
+        <p className="text-lg text-  sm:text-xl mb-8">
           We offer reliable, secure, and fast hosting solutions for your website or application.
           Get started today with the best infrastructure in the industry.
         </p>
@@ -119,12 +122,12 @@ const Aboutpage = () => {
               <div className="md:w-[450px] w-[full] pl-4 flex flex-col justify-center border-[#FFFFFF21] md:border-r border-b md:border-b-0  h-[280px] ">
                 <div className="h-[230px] md:w-[300px]    md:m-auto">
                   <img
-                    src="https://templatekit.jegtheme.com/cloudsion/wp-content/uploads/sites/383/2023/06/Investment.png"
+                    src="	https://templatekit.jegtheme.com/cloudsion/wp-content/uploads/sites/383/2023/06/Presentation-1.png"
                     alt=""
                     className="h-[50px] w-[50px]"
                   />
                   <p className="text-[#f3faf9] mt-4 text-2xl font-semibold">
-                    Cost Optimization
+                    Integrity
                   </p>
                   <p className="mt-3 text-[#E7E9EA]">
                     Duis aute irure dolor in reprehenderit in voluptate velit
@@ -136,12 +139,12 @@ const Aboutpage = () => {
               <div className="md:w-[450px] w-[full] pl-4 flex flex-col justify-center border-[#FFFFFF21] md:border-r border-b md:border-b-0  h-[280px] ">
                 <div className="h-[230px] md:w-[300px]    md:m-auto">
                   <img
-                    src="https://templatekit.jegtheme.com/cloudsion/wp-content/uploads/sites/383/2023/06/Protection.png"
+                    src="https://templatekit.jegtheme.com/cloudsion/wp-content/uploads/sites/383/2023/06/Idea-1.png"
                     alt=""
                     className="h-[50px] w-[50px]"
                   />
                   <p className="text-[#f3faf9] mt-4 text-2xl font-semibold">
-                    Cost Optimization
+                    Innovation
                   </p>
                   <p className="mt-3 text-[#E7E9EA]">
                     Duis aute irure dolor in reprehenderit in voluptate velit
@@ -150,15 +153,15 @@ const Aboutpage = () => {
                 </div>
               </div>
 
-              <div className="md:w-[450px] w-full flex flex-col justify-center border-[#FFFFFF21]  border-b md:border-b-0  h-[280px]">
+              <div className="md:w-[450px] pl-4 w-full flex flex-col justify-center border-[#FFFFFF21]  border-b md:border-b-0  h-[280px]">
                 <div className="h-[230px] md:w-[300px]    md:m-auto">
                   <img
-                    src="https://templatekit.jegtheme.com/cloudsion/wp-content/uploads/sites/383/2023/06/Encription.png"
+                    src="	https://templatekit.jegtheme.com/cloudsion/wp-content/uploads/sites/383/2023/06/Discussion-2.png"
                     alt=""
                     className="h-[50px] w-[50px]"
                   />
                   <p className="text-[#f3faf9] mt-4 text-2xl font-semibold">
-                    Cost Optimization
+                    Collaboration
                   </p>
                   <p className="mt-3 text-[#E7E9EA]">
                     Duis aute irure dolor in reprehenderit in voluptate velit
@@ -172,7 +175,7 @@ const Aboutpage = () => {
 
       {/* part 2 */}
       <div className="h-auto w-[100%] ">
-         <div className="h-[700px] md:mt-[100px]  md:h-[350px] flex md:flex-row flex-col  w-[90%] justify-center mt-[80px] items-center md:m-auto">
+         <div className="h-[870px] md:mt-[100px]  md:h-[350px] flex md:flex-row flex-col  w-[90%] justify-center mt-[80px] items-center md:m-auto">
                <div className="md:h-[400px] h-[300px]   md:mt-[60px] w-[80%]">
                        <div><img src={per} className="md:h-[270px] h-[240px]  w-[65%] transition-transform duration-500 transform hover:translate-x-10  text-white p-4 " alt="" /> 
 
@@ -180,21 +183,21 @@ const Aboutpage = () => {
                </div>
                <div className="h-[300px] w-[90%]">
                   <div className="h-[300px]  w-[100%]">
-                      <p className="text-4xl text-[#21DECE] font-bold">About Rackleaf Hosting Performance.</p>
+                      <p className="text-4xl text-[#21DECE] font-bold">Rackleaf delivers ultra-fast,infrastructure and next-gen security—built for speed, scale, and stability.</p>
                       <p className="mt-5 text-md text-[#E7E9EA] w-[90%]">At Rackleaf Hosting, performance isn’t just a feature — it’s our foundation. We’ve built our hosting infrastructure from the ground up to deliver ultra-fast load times, 99.99% uptime, and seamless scalability for businesses of all sizes. Whether you're running a startup site or scaling an enterprise platform, our servers are optimized to keep you fast, secure, and always online.</p>
                   </div>
                </div>
          </div>
  
-        <div className="h-[700px] md:mt-10  md:h-[350px] flex md:flex-row flex-col  w-[90%] justify-center  items-center md:m-auto">
+        <div className="h-[870px] md:mt-20 mt-6  md:h-[350px] flex md:flex-row flex-col  w-[90%] justify-center  items-center md:m-auto">
                <div className="h-[300px] md:h-[400px] w-[90%]">
                   <div className="h-[300px]  w-[100%]">
-                      <p className="text-4xl text-[#21DECE] font-bold">About Rackleaf Hosting Performance.</p>
-                      <p className="mt-5 text-md text-[#E7E9EA] w-[90%]">At Rackleaf Hosting, performance isn’t just a feature — it’s our foundation. We’ve built our hosting infrastructure from the ground up to deliver ultra-fast load times, 99.99% uptime, and seamless scalability for businesses of all sizes. Whether you're running a startup site or scaling an enterprise platform, our servers are optimized to keep you fast, secure, and always online.</p>
+                      <p className="text-4xl text-[#21DECE] font-bold">Fast, secure, and scalable hosting solutions that ensure your website runs smoothly—no matter the size of your business</p>
+                      <p className="mt-5 text-md text-[#E7E9EA] w-[90%]">"Fast, secure, and scalable" targets the key features most people are looking for in hosting: speed, safety, and the ability to grow with their needs. We’ve built our hosting infrastructure from the ground up to deliver ultra-fast load times, 99.99% uptime, and seamless scalability for businesses of all sizes. Whether you're running a startup site or scaling an enterprise platform, our servers are optimized to keep you fast, secure, and always online.</p>
                   </div>
                </div>
 
-               <div className="md:h-[380px]  h-[300px]    md:mt-[60px] w-[80%]">
+               <div className="md:h-[380px]  h-[300px] mt-[230px]   md:mt-[60px] w-[80%]">
                        <div><img src={per1} className="md:h-[380px] h-[300px]  md:mt-[-60px] w-[65%] transition-transform duration-500 transform hover:translate-x-10 md:ml-[80px]  text-white p-4 " alt="" /> 
 
                        </div>
@@ -232,7 +235,7 @@ const Aboutpage = () => {
                     </div>
               </div>
               <div className="h-auto mt-[40px] md:mt-0 m-0 w-full flex flex-col justify-none items-start">
-                 <p className="text-4xl text-[#71D6CE]">Data That Speaks Our Unparalleled Performance</p>
+                 <p className="text-4xl text-[#71D6CE]">Let the Data Talk—RACK Leaf Delivers Unmatched Performance.Turning Insight into Unrivaled Impact</p>
                  <p className="mt-4 text-[#FFFFFF] w-[80%] text-md">Eget mi proin sed libero enim sed faucibus viverrate maecenas accumsan lacus vel facilisis volutpat viverra maecenas accumsan it incididunt ut labore et dolore mag aliqu ut enim ad minim veniam.</p>
                 <div className="gap-10">
                    <ul className="flex flex-col text-[#FFFFFF] md:flex-row">
@@ -257,14 +260,14 @@ const Aboutpage = () => {
         <div>
            <section className="py-20 ">
       <div className="container mx-auto text-center mb-10 md:mt-[-100px]">
-        <h2 className="text-4xl font-semibold mb-12">What Our Clients Say</h2>
+        <h2 className="text-4xl text-[#21DECE] font-semibold mb-12">What Our Clients Say</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-[#143337] backdrop-blur-lg  shadow-lg rounded-lg p-6  hover:shadow-xl ">
               <img
                 src={testimonial.photo}
                 alt=""
-                className="w-32 h-32 mx-auto mb-4"
+                className="w-[200px] h-32 mx-auto mb-4"
               />
               <h3 className="text-2xl text-white font-semibold mb-2">{testimonial.name}</h3>
               <p className="text-sm text-white  mb-4">{testimonial.position}</p>

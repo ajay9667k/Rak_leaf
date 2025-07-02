@@ -36,7 +36,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               
-               <Link to={"/"}>
+               <Link to={"/service"}>
               <p className='text-[18px] hover:text-[#2563eb] font-semibold text-white'>Service</p>
               </Link>
             </li>
@@ -62,18 +62,17 @@ const Navbar = () => {
                 listStyle: 'none', // Remove bullet points
                 margin: 0,
               }}>
-                <li><a className="dropdown-link" href="#pricing">Pricing</a></li>
+                <li><a className="dropdown-link" href="/price">Pricing</a></li>
                 <hr />
-                <li><a className="dropdown-link" href="#blog">Blog</a></li>
+                <li><a className="dropdown-link" href="/blog">Blog</a></li>
                 <hr />
-                <li><a className="dropdown-link" href="#single-post">Single Post</a></li><hr />
-                <li><a className="dropdown-link" href="#faq">FAQ</a></li>
-                <hr />
-                <li><a className="dropdown-link" href="#404">404 Page</a></li>
+                <li><a className="dropdown-link" href="/singal">Single Post</a></li><hr />
+                <li><a className="dropdown-link" href="/morefaq">FAQ</a></li>
+               
               </ul>
             </li>
              <li className="nav-item">
-              <Link to={"/"}>
+              <Link to={"/contact"}>
               <p className='text-[18px] hover:text-[#2563eb] font-semibold text-white'>Contact</p>
               </Link>
             </li>
@@ -107,12 +106,14 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="mobile-menu">
             <ul className="mobile-nav-list">
-              <li className="mobile-nav-item">
-                <a className="mobile-nav-link">Home</a>
-              </li>
-              <li className="mobile-nav-item">
-                <a className="mobile-nav-link">About</a>
-              </li>
+            <li> <Link to={"/"}>
+              <p className='text-[18px] hover:text-[#2563eb] font-semibold text-white'>Home</p>
+              </Link></li>
+              <li className="nav-item">
+               <Link to={"/about"}>
+              <p className='text-[18px] hover:text-[#2563eb] font-semibold text-white'>About</p>
+              </Link>
+            </li>
               <li className="mobile-nav-item">
                 <a className="mobile-nav-link" href="#">Service</a>
               </li>
@@ -122,9 +123,11 @@ const Navbar = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                 </svg>
               </li>
-               <li className="mobile-nav-item">
-                <a className="mobile-nav-link">Contact</a>
-              </li>
+               <li className="nav-item">
+              <Link to={"/contact"}>
+              <p className='text-[18px] hover:text-[#2563eb] font-semibold text-white'>Contact</p>
+              </Link>
+            </li>
             </ul>
 
             <div className="mobile-actions">

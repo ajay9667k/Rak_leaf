@@ -24,7 +24,7 @@ const Footer = () => {
           <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
             <li><a href="#" style={{ color: '#fff', textDecoration: 'none', display: 'block', marginBottom: 10, }}>Home</a></li>
             <li><a href="#" style={{ color: '#fff', textDecoration: 'none', display: 'block', marginBottom: 10,  }}>About</a></li>
-            <li><a href="#" style={{ color: '#fff', textDecoration: 'none', display: 'block', marginBottom: 10, fontSize: '5px' }}>Service</a></li>
+            <li><a href="#" style={{ color: '#fff', textDecoration: 'none', display: 'block', marginBottom: 10 }}>Service</a></li>
             <li><a href="#" style={{ color: '#fff', textDecoration: 'none', display: 'block', marginBottom: 10, fontSize: '1.08em' }}>Pricing</a></li>
           </ul>
         </div>

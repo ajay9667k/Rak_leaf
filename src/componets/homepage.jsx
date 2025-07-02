@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Check } from "lucide-react";
 import reso from "../imgerack/res.png";
 import reso1 from "../imgerack/ch2.png";
 import reso2 from "../imgerack/ch3.png";
@@ -72,7 +73,68 @@ const Homepage = () => {
     
   }, [count2]);
   
+    const [isYearly, setIsYearly] = useState(false);
 
+  const pricingData = [
+    {
+      id: "basic",
+      name: "Basic",
+      description: "Perfect for getting started",
+      monthlyPrice: 9,
+      yearlyPrice: 90,
+      popular: false,
+      features: [
+        "Up to 3 projects",
+        "5GB storage",
+        "Email support",
+        "Basic analytics",
+        "Mobile app access",
+      ],
+    },
+    {
+      id: "pro",
+      name: "Pro",
+      description: "Most popular for growing teams",
+      monthlyPrice: 29,
+      yearlyPrice: 290,
+      popular: true,
+      features: [
+        "Unlimited projects",
+        "50GB storage",
+        "Priority support",
+        "Advanced analytics",
+        "Team collaboration",
+        "API access",
+        "Custom integrations",
+      ],
+    },
+    {
+      id: "enterprise",
+      name: "Enterprise",
+      description: "Advanced features for large organizations",
+      monthlyPrice: 99,
+      yearlyPrice: 990,
+      popular: false,
+      features: [
+        "Everything in Pro",
+        "Unlimited storage",
+        "24/7 phone support",
+        "Custom reporting",
+        "SSO integration",
+        "Advanced security",
+        "Dedicated account manager",
+        "Custom onboarding",
+      ],
+    },
+  ];
+
+  const formatPrice = (monthly, yearly) => (isYearly ? yearly : monthly);
+
+  const calculateSavings = (monthly, yearly) => {
+    const monthlyCost = monthly * 12;
+    const savings = monthlyCost - yearly;
+    return Math.round((savings / monthlyCost) * 100);
+  };
   
   return (
     <div className="bg-[#07282C] h-auto">
@@ -143,7 +205,7 @@ const Homepage = () => {
       <div>
         {/* 2 part */}
 
-        <div className="h-auto w-full  mt-10 ">
+        <div className="h-auto w-full  md:mt-[100px] ">
           <p className="text-center w-full md:text-5xl text-[#71D6CE] font-serif tracking-wide ">
             Provide Tools and Expertise to Effectively <br />
             <span className="">Manage Cloud Environments</span>
@@ -181,7 +243,7 @@ const Homepage = () => {
                     className="h-[50px] w-[50px]"
                   />
                   <p className="text-[#f3faf9] mt-4 text-2xl font-semibold">
-                    Cost Optimization
+                    Enhanced Security
                   </p>
                   <p className="mt-3 text-[#E7E9EA]">
                     Duis aute irure dolor in reprehenderit in voluptate velit
@@ -198,7 +260,7 @@ const Homepage = () => {
                     className="h-[50px] w-[50px]"
                   />
                   <p className="text-[#f3faf9] mt-4 text-2xl font-semibold">
-                    Cost Optimization
+                    Streamlined Operations
                   </p>
                   <p className="mt-3 text-[#E7E9EA]">
                     Duis aute irure dolor in reprehenderit in voluptate velit
@@ -216,7 +278,7 @@ const Homepage = () => {
                     className="h-[50px] w-[50px]"
                   />
                   <p className="text-[#f3faf9] mt-4 text-2xl font-semibold">
-                    Cost Optimization
+                    Performance and Reliability
                   </p>
                   <p className="mt-3 text-[#E7E9EA]">
                     Duis aute irure dolor in reprehenderit in voluptate velit
@@ -233,7 +295,7 @@ const Homepage = () => {
                     className="h-[50px] w-[50px]"
                   />
                   <p className="text-[#f3faf9] mt-4 text-2xl font-semibold">
-                    Cost Optimization
+                    Scalability and Flexibility
                   </p>
                   <p className="mt-3 text-[#E7E9EA]">
                     Duis aute irure dolor in reprehenderit in voluptate velit
@@ -250,7 +312,7 @@ const Homepage = () => {
                     className="h-[50px] w-[50px]"
                   />
                   <p className="text-[#f3faf9] mt-4 text-2xl font-semibold">
-                    Cost Optimization
+                    Monitoring and Support
                   </p>
                   <p className="mt-3 text-[#E7E9EA]">
                     Duis aute irure dolor in reprehenderit in voluptate velit
@@ -298,123 +360,123 @@ const Homepage = () => {
         </div>
 
         {/* part 4 */}
-        <div className="h-auto w-full mt-32">
-          <p className="text-center text-6xl text-[#71D6CE]">
-            {" "}
-            Choose Your Web Hosting Plan
-          </p>
+       <div className="max-w-7xl mx-auto">
+          {/* Header Section */}
+          <div className="text-center mt-[80px] mb-12">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#71D6CE] font-bold  mb-4">
+              Choose Your Plan
+            </h2>
+            <p className="text-lg sm:text-xl text-[#f3faf9] mb-8 max-w-2xl mx-auto">
+              Select the perfect plan for your needs. All plans include our core
+              features with varying levels of usage and support.
+            </p>
 
-          <div className="flex flex-col md:flex-row h-auto w-full gap-24  md:w-[100%] justify-center items-center mt-20">
-            <div className="h-auto w-[300px] rounded-md bg-[#6668630d] border-[2px] border-l-fuchsia-300  shadow-lg shadow-zinc-100">
-              <div className="h-[630px] w-[300px] flex flex-col">
-                <div className="h-[630px] w-[280px] flex flex-col items-center text-center">
-                  <p className="font-bold font-serif text-3xl border-gray-500 border-dotted  w-[90%] border-b text-[#21DECE] mt-3 h-[50px]">
-                    Beginner Plan
-                  </p>
-                  <div className="h-[200px] w-[280px]  ml-4 mt-2  border-gray-400">
-                    <img
-                      src={icon}
-                      className="h-[100px] w-[80px] m-auto"
-                      alt=""
-                    />
-                    <p className="text-xl font-semibold text-white">
-                      Cloud <span>Hosting</span>
+            {/* Unique Billing Toggle */}
+            <div className="inline-flex items-center justify-center bg-[#0A3A40] p-1 rounded-full border border-[#71D6CE] shadow-inner">
+              <button
+                className={`px-4 py-1.5 text-sm font-semibold rounded-full transition-all duration-300 ${
+                  !isYearly
+                    ? "bg-[#71D6CE] text-[#07282C] shadow"
+                    : "text-white"
+                }`}
+                onClick={() => setIsYearly(false)}
+              >
+                Monthly
+              </button>
+              <button
+                className={`px-4 py-1.5 text-sm font-semibold rounded-full transition-all duration-300 ${
+                  isYearly ? "bg-[#71D6CE] text-[#07282C] shadow" : "text-white"
+                }`}
+                onClick={() => setIsYearly(true)}
+              >
+                Yearly
+              </button>
+            </div>
+
+            {isYearly && (
+              <div className="mt-3 text-sm text-[#71D6CE] font-medium">
+                Save up to 17% with yearly billing
+              </div>
+            )}
+          </div>
+
+          {/* Pricing Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-6">
+            {pricingData.map((plan) => (
+              <div
+                key={plan.id}
+                className={`relative bg-[#0A3A40] rounded-lg p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
+                  plan.popular
+                    ? "border-2 border-[#71D6CE] shadow-xl ring-4 ring-[#71D6CE]/20"
+                    : "border border-gray-600 hover:border-[#71D6CE]/50"
+                }`}
+              >
+                {/* Popular Badge */}
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-[#71D6CE] to-[#4DBEB8] text-[#07282C] text-sm font-bold px-4 py-2 rounded-full shadow-lg">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+
+                {/* Top Content */}
+                <div>
+                  <div className="text-center mb-8">
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
+                      {plan.name}
+                    </h3>
+                    <p className="text-[#71D6CE] text-sm mb-6">
+                      {plan.description}
                     </p>
 
-                    <p className="text-3xl mt-3 font-semibold text-white">
-                      $24.99 / <span className="text-xl">Month</span>
-                    </p>
+                    <div className="mb-6">
+                      <span className="text-4xl sm:text-5xl font-bold text-white">
+                        ${formatPrice(plan.monthlyPrice, plan.yearlyPrice)}
+                      </span>
+                      <span className="text-[#71D6CE] text-lg ml-2">
+                        /{isYearly ? "year" : "month"}
+                      </span>
+                      {isYearly && (
+                        <div className="text-sm text-[#71D6CE] mt-2">
+                          Save{" "}
+                          {calculateSavings(
+                            plan.monthlyPrice,
+                            plan.yearlyPrice
+                          )}
+                          % vs monthly
+                        </div>
+                      )}
+                    </div>
                   </div>
 
-                  <ul className="mt-4 text-xl text-[white]">
-                    <li className="pt-2  ">Host 1 Website</li>
-                    <li className="pt-2">1 GB Space </li>
-                    <li className="pt-2">5 GB Bandwidth </li>
-                    <li className="pt-2">Free SSL Certificate </li>
-                    <li className="pt-2">35 Email Accounts </li>
-                    <li className="pt-2">10 Domains </li>
+                  {/* Features List */}
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature, i) => (
+                      <li key={i} className="flex items-start space-x-3">
+                        <Check className="h-5 w-5 text-[#71D6CE] mt-0.5" />
+                        <span className="text-white text-sm leading-6">
+                          {feature}
+                        </span>
+                      </li>
+                    ))}
                   </ul>
-                  <button className="bg-[#21DECE] mt-10  px-3 py-3 text-lg rounded-md text-black">
-                    GET STARTED
+                </div>
+
+                {/* CTA Button (Always Aligned Bottom) */}
+                <div className="mt-auto">
+                  <button
+                    className={`w-full py-3 px-6 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-offset-[#07282C] ${
+                      plan.popular
+                        ? "bg-gradient-to-r from-[#71D6CE] to-[#4DBEB8] text-[#07282C] hover:shadow-lg focus:ring-[#71D6CE]"
+                        : "bg-white text-[#07282C] hover:bg-[#71D6CE] hover:text-[#07282C] focus:ring-white"
+                    }`}
+                  >
+                    Get Started
                   </button>
                 </div>
               </div>
-            </div>
-
-            <div className="h-auto w-[310px] rounded-md bg-[#6668630d] border-[2px] border-l-fuchsia-300  shadow-lg shadow-zinc-100 md:mt-[-20px]">
-              <div className="h-[640px] w-[310px] flex flex-col">
-                <div className="h-[630px] w-[280px] flex flex-col items-center text-center">
-                  <p className="h-[40px] mt-[-25px] w-[250px] ml-3 rounded-t-md bg-[#21DECE]  text-xl font-semibold text-[white]">
-                    BEST VALUE
-                  </p>
-                  <p className="font-bold font-serif text-3xl border-gray-500 border-dotted  w-[90%] border-b text-[#21DECE] mt-3 h-[50px]">
-                    Advanced
-                  </p>
-                  <div className="h-[200px] w-[280px]  ml-4 mt-2  border-gray-400">
-                    <img
-                      src={icon1}
-                      className="h-[100px] w-[80px] m-auto"
-                      alt=""
-                    />
-                    <p className="text-xl font-semibold text-white">
-                      Dedicated <span>Server</span>
-                    </p>
-
-                    <p className="text-3xl mt-3 font-semibold text-white">
-                      $185.00 / <span className="text-xl">Month</span>
-                    </p>
-                  </div>
-
-                  <ul className="mt-4 text-xl  text-[white]">
-                    <li className="pt-2  ">Host 1 Website</li>
-                    <li className="pt-2">8GB DDR3 ECC </li>
-                    <li className="pt-2">4x2 3.20Ghz </li>
-                    <li className="pt-2">1TB SSD </li>
-                    <li className="pt-2">35 Email Accounts </li>
-                    <li className="pt-2">8 Domains </li>
-                  </ul>
-                  <button className="bg-[#21DECE] mt-10  px-3 py-3 text-lg rounded-md text-black">
-                    GET STARTED
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div className="h-auto w-[300px] rounded-md bg-[#6668630d] border-[2px] border-l-fuchsia-300  shadow-lg shadow-zinc-100">
-              <div className="h-[630px] w-[300px] flex flex-col">
-                <div className="h-[630px] w-[280px] flex flex-col items-center text-center">
-                  <p className="font-bold font-serif text-3xl border-gray-500 border-dotted  w-[90%] border-b text-[#21DECE] mt-3 h-[50px]">
-                    Business
-                  </p>
-                  <div className="h-[200px] w-[280px]  ml-4 mt-2  border-gray-400">
-                    <img
-                      src={icon2}
-                      className="h-[100px] w-[80px] m-auto"
-                      alt=""
-                    />
-                    <p className="text-xl font-semibold text-white">
-                      Cloud <span>VPS</span>{" "}
-                    </p>
-
-                    <p className="text-3xl mt-3 font-semibold text-white">
-                      $109.99 / <span className="text-xl">Month</span>
-                    </p>
-                  </div>
-
-                  <ul className="mt-4 text-xl text-[white]">
-                    <li className="pt-2  ">Host 3 Website</li>
-                    <li className="pt-2">4Gb Memory</li>
-                    <li className="pt-2">60GB HDD Raid 10 </li>
-                    <li className="pt-2">Unlimited Traffic </li>
-                    <li className="pt-2">35 Email Accounts </li>
-                    <li className="pt-2">2 IP Address </li>
-                  </ul>
-                  <button className="bg-[#21DECE] mt-10  px-3 py-3 text-lg rounded-md text-black">
-                    GET STARTED
-                  </button>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 
@@ -460,10 +522,10 @@ const Homepage = () => {
                     </div>
               </div>
               <div className="h-auto mt-[40px] md:mt-0 m-0 w-full flex flex-col justify-none items-start">
-                 <p className="text-4xl text-[#71D6CE]">Data That Speaks Our Unparalleled Performance</p>
-                 <p className="mt-4 text-[#FFFFFF] w-[80%] text-md">Eget mi proin sed libero enim sed faucibus viverrate maecenas accumsan lacus vel facilisis volutpat viverra maecenas accumsan it incididunt ut labore et dolore mag aliqu ut enim ad minim veniam.</p>
-                <div className="gap-10">
-                   <ul className="flex flex-col text-[#FFFFFF] md:flex-row">
+                 <p className="text-4xl text-[#71D6CE]">Let the Data Talk—RACK Leaf Delivers Unmatched Performance.Turning Insight into Unrivaled Impact</p>
+                 <p className="mt-4  text-[#FFFFFF] w-[80%] text-lg">Eget mi proin sed libero enim sed faucibus viverrate maecenas accumsan lacus vel facilisis volutpat viverra maecenas accumsan it incididunt ut labore et dolore mag aliqu ut enim ad minim veniam.</p>
+                <div className="gap-3 flex flex-col">
+                   <ul className="flex flex-col  text-[#FFFFFF] md:flex-row">
                   <li>Accelerated time   </li>
                   <li >Prioritize reliability</li>
                  </ul>
