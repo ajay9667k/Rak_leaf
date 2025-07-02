@@ -332,7 +332,7 @@ const Homepage = () => {
               </div>
               <div className="h-[300px] w-full gap-6 flex flex-row mt-5">
                 <div className="h-[180px] w-[230px] p-4 bg-[#FFFFFF0D] shadow-2xs  backdrop-blur-lg ">
-                  <img src={reso1} className="h-[160px] w-[200px]" alt="" />
+                  <img src={reso1} className="h-[160px] md:w-[200px] w-[160px]" alt="" />
                 </div>
 
                 <div className="h-[300px] w-[330px] p-4 bg-[#FFFFFF0D] shadow-2xs  backdrop-blur-lg ">
