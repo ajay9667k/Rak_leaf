@@ -115,14 +115,39 @@ const Navbar = () => {
               </Link>
             </li>
               <li className="mobile-nav-item">
-                <a className="mobile-nav-link" href="#">Service</a>
+                <a className="mobile-nav-link" href="/service">Service</a>
               </li>
-              <li className="mobile-nav-item">
-                <a className="mobile-nav-link">Pages</a>
+              <li className="nav-item dropdown" style={{ position: 'relative' }}>
+              <Link to={"/"} className="nav-link" >
+                <span>Pages</span>
                 <svg className="dropdown-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                 </svg>
-              </li>
+              </Link>
+              <ul className="dropdown-menu" style={{
+                display: 'none',
+                position: 'absolute',
+                top: '100%',
+                left: 0,
+                background: '#fff',
+                color: '#222',
+                minWidth: 180,
+                boxShadow: '0 4px 16px rgba(0,0,0,0.10)',
+                borderRadius: 8,
+                padding: '0.5rem 0',
+                zIndex: 1000,
+                listStyle: 'none', // Remove bullet points
+                margin: 0,
+              }}>
+                <li><a className="dropdown-link" href="/price">Pricing</a></li>
+                <hr />
+                <li><a className="dropdown-link" href="/blog">Blog</a></li>
+                <hr />
+                <li><a className="dropdown-link" href="/singal">Single Post</a></li><hr />
+                <li><a className="dropdown-link" href="/morefaq">FAQ</a></li>
+               
+              </ul>
+            </li>
                <li className="nav-item">
               <Link to={"/contact"}>
               <p className='text-[18px] hover:text-[#2563eb] font-semibold text-white'>Contact</p>
@@ -131,7 +156,7 @@ const Navbar = () => {
             </ul>
 
             <div className="mobile-actions">
-              <button className="btn-link" >Login</button>
+              <Link to={"/login"}><button className="btn-link" >Login</button></Link>
               <button className="btn-link">Contact Sales</button>
               <button className="mobile-btn-primary">Get started — it's free</button>
             </div>

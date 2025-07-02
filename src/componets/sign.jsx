@@ -35,7 +35,7 @@ const Signup = () => {
   return (
     <div className="h-[1000px] md:h-[800px] w-full bg-[#07282C] flex flex-col justify-center items-center">
       <div className="p-8 rounded-lg bg-[#0e3c42] gap-32 flex flex-row shadow-md w-[95%] h-auto md:h-[700px]">
-        <div className="flex flex-col  h-auto md:h-[600px] justify-center md:w-[50%] w-[100%] ml-[40px]">
+        <div className="flex flex-col  h-auto md:h-[600px] justify-center md:w-[50%] w-[100%] md:ml-[40px]">
           <div className="w-full h-auto bg-[#cde8eb] p-8 rounded-lg shadow-md">
             <h2 className="text-3xl text-blue-600  font-bold text-center mb-6">
              Signup
